@@ -1,14 +1,14 @@
 {
-  "name": "conversation-api",
+  "name": "ticketing-system",
   "version": "1.0.0",
-  "description": "A brief description of your project",
+  "description": "This project is a simple ticketing system built using Node.js, Express.js, and MongoDB.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Your Name",
+  "author": "rakesh Roushan",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
