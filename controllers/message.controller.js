@@ -4,11 +4,18 @@ const Ticket = require("../models/ticket.model");
 // Add a message to a ticket
 exports.addMessageToTicket = async (req, res) => {
   try {
-    const { ticketId, messageText, attachedImages, attachedFiles } = req.body;
+    const {
+      ticketId,
+      replyMessageId,
+      messageText,
+      attachedImages,
+      attachedFiles,
+    } = req.body;
 
     const message = new Message({
       message: messageText,
       ticketId: ticketId,
+      replyMessageId: replyMessageId,
       attachedImages: attachedImages || [],
       attachedFiles: attachedFiles || [],
     });
