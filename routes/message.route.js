@@ -11,4 +11,7 @@ router.post('/reply', messageController.replyToMessage);
 // Route to get all messages for a specific ticket
 router.get('/:ticketId', messageController.getMessagesForTicket);
 
+// Route to get a single message by ID
+router.get('/single/:id', messageController.getMessageById);
+
 module.exports = router;
