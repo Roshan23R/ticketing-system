@@ -1,5 +1,4 @@
 const Ticket = require('../models/ticket.model');
-const Message = require('../models/message.model');
 
 // Create a new ticket
 exports.createTicket = async (req, res) => {
@@ -15,7 +14,7 @@ exports.createTicket = async (req, res) => {
 // Get all tickets
 exports.getAllTickets = async (req, res) => {
   try {
-    const tickets = await Ticket.find().populate('messages');
+    const tickets = await Ticket.find();
     res.status(200).json(tickets);
   } catch (error) {
     res.status(400).json({ error: error.message });

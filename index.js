@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const ticketRoutes = require('./routes/ticket.route');
 const messageRoutes = require('./routes/message.route');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
 const app = express();
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 // Use the ticket routes and message routes
 app.use('/api/ticket', ticketRoutes);
